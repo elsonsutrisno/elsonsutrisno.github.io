@@ -1,44 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Portfolio Experience</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Software Developer | Open Source Enthusiast</p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm [Your Name]! I'm passionate about building web applications and contributing to open-source projects. Check out my work below!</p>
+  <!-- Custom Cursor Follower -->
+  <div id="cursor-follower"></div>
+
+  <!-- Shared Fixed Interactive Background Canvas -->
+  <canvas id="interactive-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">ELSON.</div>
+  </nav>
+
+  <!-- Side Dot Navigation -->
+  <div class="nav-dots">
+    <div class="dot active" data-slide="0"></div>
+    <div class="dot" data-slide="1"></div>
+    <div class="dot" data-slide="2"></div>
+    <div class="dot" data-slide="3"></div>
+  </div>
+
+  <!-- Full-Screen Scroll-Snap Wrapper -->
+  <div class="snap-container" id="snap-wrapper">
+
+    <!-- Slide 1: Hero Page -->
+    <section id="hero" data-accent="#38bdf8">
+      <div class="content-wrapper">
+        <h1 class="reveal-title hero-name">Elson Sutrisno</h1>
+        <p class="reveal-card delay-1">Software Engineer specializing in full-stack applications.</p>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div id="repo-list">
-            <!-- Repositories will be dynamically added here via JavaScript or manually -->
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of your project. <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a></p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of your project. <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a></p>
-            </div>
+    <!-- Slide 2: About / Craft Page -->
+    <section id="about" class="blackhole-effect" data-accent="#a855f7">
+      <div class="content-wrapper">
+        <h2 class="section-heading reveal-title" style="color: var(--accent-purple);">About My Craft</h2>
+        <div class="about-grid">
+          <div class="glass-card reveal-card">
+            <h3>🖥️ Front-End Architecture</h3>
+            <p>Building responsive, component-driven UIs using React, TypeScript, and modern CSS to ensure maintainable
+              and scalable codebases.</p>
+          </div>
+          <div class="glass-card reveal-card">
+            <h3>⚙️ Backend & Systems</h3>
+            <p>Designing RESTful APIs and managing database interactions to support real-time data processing and secure
+              user authentication.</p>
+          </div>
+          <div class="glass-card reveal-card">
+            <h3>📱 Mobile & AI</h3>
+            <p>Developing cross-platform mobile applications with React Native and integrating Python-based machine learning models and computer vision.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
-    </footer>
+    <!-- Slide 3: Projects Page -->
+    <section id="projects" class="aurora-effect" data-accent="#10b981">
+      <div class="content-wrapper">
+        <h2 class="section-heading reveal-title" style="color: var(--accent-emerald);">Featured Work</h2>
+        <div class="projects-grid">
 
-    <script src="script.js"></script>
+          <div class="project-card reveal-card">
+            <div class="project-info">
+              <div class="project-tag">PHP • MySQL • Docker</div>
+              <h3>Inventory & Order System</h3>
+              <p>A full-stack dashboard built to track real-time stock levels, process incoming orders, and reduce
+                manual data entry errors.</p>
+            </div>
+          </div>
+
+          <div class="project-card reveal-card">
+            <div class="project-info">
+              <div class="project-tag">HTML • CSS • JavaScript</div>
+              <h3>Interactive Portfolio</h3>
+              <p>A custom-built, zero-dependency web experience featuring scroll-snap mechanics and a state-driven
+                animations.</p>
+            </div>
+          </div>
+
+          <div class="project-card reveal-card">
+            <div class="project-info">
+              <div class="project-tag">React Native • Python • OpenCV</div>
+              <h3>Face Recognition App</h3>
+              <p>A mobile application utilizing machine learning models to detect and verify facial biometrics with
+                sub-second processing latency.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Contact Page -->
+    <section id="contact" data-accent="#f59e0b">
+      <div class="content-wrapper">
+        <h2 class="section-heading reveal-title" style="color: var(--accent-amber);">Let's Create Together</h2>
+        <div class="contact-card reveal-card delay-1">
+          <p style="font-size: 1.2rem; color: #cbd5e1; line-height: 1.7;">
+            Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          </p>
+          <a href="mailto:elsonsutrisno@gmail.com" class="btn-contact">Email Me</a>
+
+          <!-- Add your social links here -->
+          <div class="social-links">
+            <a href="https://github.com/elsonsutrisno" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://www.linkedin.com/in/elson-sutrisno-6a7357236" target="_blank" class="social-btn">LinkedIn</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
