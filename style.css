@@ -150,6 +150,7 @@ nav {
   background: radial-gradient(circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%),
       var(--accent-cyan) 0%,
       #ffffff 100%);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background 0.1s ease-out;
 }
