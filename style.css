@@ -1,6 +1,7 @@
 :root {
   --bg-dark: #090d16;
   --accent-cyan: #38bdf8;
+  --accent-red: #ef4444;
   --accent-purple: #a855f7;
   --accent-emerald: #10b981;
   --accent-amber: #f59e0b;
@@ -148,9 +149,7 @@ nav {
   letter-spacing: -1px;
   background: radial-gradient(circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%),
       var(--accent-cyan) 0%,
-      var(--accent-purple) 50%,
       #ffffff 100%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background 0.1s ease-out;
 }
@@ -344,15 +343,12 @@ h2.section-heading {
   /* Ensures it never cuts off, regardless of screen ratio */
   height: 200vmax;
   transform: translate(-50%, -50%);
-  background: conic-gradient(from 0deg,
+  background: conic-gradient(
+    from 0deg,
       transparent 0%,
       rgba(168, 85, 247, 0.05) 10%,
       rgba(0, 0, 0, 0.8) 50%,
       rgba(168, 85, 247, 0.2),
-      rgba(168, 85, 247, 0.1) 10%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(168, 85, 247, 0.3),
-
       transparent 100%);
   animation: spin-blackhole 5s linear infinite reverse, shift-gradient 8s ease-in-out infinite;
   z-index: 0;
