@@ -149,6 +149,7 @@ nav {
   letter-spacing: -1px;
   background: radial-gradient(circle 220px at var(--mouse-x, 50%) var(--mouse-y, 50%),
       var(--accent-cyan) 0%,
+      white 50%,
       #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
